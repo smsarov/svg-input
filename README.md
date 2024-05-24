@@ -1,1 +1,1 @@
-![maxDistance concept image](image.png)
+![maxDistance concept image](image-2.png)
