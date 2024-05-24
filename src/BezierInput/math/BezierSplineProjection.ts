@@ -21,7 +21,7 @@ export function BezierSplineProjection(
   let minimalDistanceParameter = l;
   let minimalDistance = Infinity;
 
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 5; i++) {
     const searchWidth = r - l;
     for (let t = l; t < r; t += searchWidth / 16 / spline.pieces.length) {
       const curPoint = spline.getPointAt(t);

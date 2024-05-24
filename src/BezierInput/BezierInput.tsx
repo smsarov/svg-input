@@ -4,6 +4,7 @@ import { CubicBezierSpline, CubicBezierSplineI } from "./math/BezierSpline";
 import { BezierSplineProjection } from "./math/BezierSplineProjection";
 import React from "react";
 import { dist } from "./math/Point";
+import { validateChildren } from "./validateChildren";
 
 interface BezierInputProps {
   children: React.ReactElement<SVGSVGElement>;
@@ -32,6 +33,9 @@ function BezierInput({
   maxDistance = Infinity,
   controlClassName,
 }: BezierInputProps) {
+
+  validateChildren(children);
+
   const { min, max } = inputOptions;
   const defaultValue = inputOptions.defaultValue || (min + max) / 2;
 
